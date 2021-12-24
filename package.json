@@ -1,9 +1,10 @@
 {
   "name": "wrangle-csv",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CSV to JSON converter, with option of traditional JSON object or JSON arrays for easier use with python backend using pandas f.ex",
   "main": "index.js",
   "scripts": {
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
