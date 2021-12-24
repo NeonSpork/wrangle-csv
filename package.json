@@ -1,10 +1,14 @@
 {
   "name": "wrangle-csv",
   "version": "1.0.0",
-  "description": "CSV to JSON wrangler",
+  "description": "CSV to JSON converter, with option of traditional JSON object or JSON arrays for easier use with python backend using pandas f.ex",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeonSpork/wrangle-csv.git"
   },
   "keywords": [
     "json",
