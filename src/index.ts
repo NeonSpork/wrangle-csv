@@ -10,7 +10,7 @@
  * @param {string} newLine Default newline is '\n' but another separator can be specified here (note that `\n\r` used by windows will automatically be sanitized)
  * @returns
  */
-function csvToJsonArr(csv: string, sep = ',', newLine = '\n') {
+function csvToJsonArr(csv: string, sep: string = ',', newLine: string = '\n') {
   var lines = csv.split(newLine);
   var headers: string[] = lines[0].split(sep);
   if (headers.length <= 1) {
@@ -76,7 +76,7 @@ function csvToJsonArr(csv: string, sep = ',', newLine = '\n') {
  * @param {string} newLine Default newline is '\n' but another separator can be specified here (note that `\n\r` used by windows will automatically be sanitized)
  * @returns
  */
-function csvToJsonObj(csv: string, sep = ',', newLine = '\n') {
+function csvToJsonObj(csv: string, sep: string = ',', newLine: string = '\n') {
   var lines = csv.split(newLine);
   var headers: string[] = lines[0].split(sep);
   if (headers.length <= 1) {
