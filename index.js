@@ -27,9 +27,6 @@ function csvToJsonArr(csv, sep = ",", newLine = "\n") {
     // Remove Windows /r EOL char if present
     if (headers[h]) {
       headers[h] = headers[h].replace(/\r/g, "");
-    }
-    if (parseFloat(lines[1][0])) {
-      columnData.push(new Array());
     } else {
       columnData.push(new Array());
     }
@@ -44,11 +41,6 @@ function csvToJsonArr(csv, sep = ",", newLine = "\n") {
       // Remove Windows /r EOL char if present
       if (currentLine[h]) {
         currentLine[h] = currentLine[h].replace(/\r/g, "");
-      }
-      if (parseFloat(currentLine[h])) {
-        columnData[h].push(Number(currentLine[h]));
-      } else if (currentLine[h] === "0") {
-        columnData[h].push(Number(currentLine[h]));
       } else {
         columnData[h].push(currentLine[h]);
       }
@@ -107,7 +99,7 @@ function csvToJsonObj(csv, sep = ",", newLine = "\n") {
   }
   // Place each array of data in the correct key/value
   // pair in the JSON
-  return jsonObj;
+  return JSON.stringify(jsonObj);
 }
 
 module.exports = { csvToJsonArr, csvToJsonObj };
