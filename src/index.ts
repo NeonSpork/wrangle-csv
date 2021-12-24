@@ -12,6 +12,9 @@
  */
 function csvToJsonArr(csv: string, sep: string = ',', newLine: string = '\n') {
   var lines = csv.split(newLine);
+  if (lines.length <= 1) {
+    throw new Error(`Invalid CSV file. Please supply a file with more than ${lines.length} ${lines.length === 1 ? 'line' : 'lines'}`);
+  }
   var headers: string[] = lines[0].split(sep);
   if (headers.length <= 1) {
     sep = ';'
@@ -78,6 +81,9 @@ function csvToJsonArr(csv: string, sep: string = ',', newLine: string = '\n') {
  */
 function csvToJsonObj(csv: string, sep: string = ',', newLine: string = '\n') {
   var lines = csv.split(newLine);
+  if (lines.length <= 1) {
+    throw new Error(`Invalid CSV file. Please supply a file with more than ${lines.length} ${lines.length === 1 ? 'line' : 'lines'}`);
+  }
   var headers: string[] = lines[0].split(sep);
   if (headers.length <= 1) {
     sep = ';'
