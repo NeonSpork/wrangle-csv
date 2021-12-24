@@ -1,12 +1,18 @@
 {
   "name": "wrangle-csv",
   "version": "1.0.0",
-  "description": "",
+  "description": "CSV to JSON wrangler",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "json",
+    "csv",
+    "convert",
+    "wrangle",
+    "parse"
+  ],
+  "author": "JB Leiknes",
+  "license": "MIT"
 }
