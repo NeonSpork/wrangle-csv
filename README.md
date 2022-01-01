@@ -13,17 +13,19 @@ const fs = require("fs");
 const wrangle = require("wrangle-csv");
 
 const csvFile = fs.readFile("c:/path/to/your/file.csv");
-const jsonData = wrangle.csvToJsonArr(csvFile);
+const jsonArray = wrangle.csvToJsonArr(csvFile);
+const jsonObject = wrangle.csvToJsonObj(csvFile);
 ```
 
 Typescript
 
 ```typescript
 import * as fs from "fs";
-import { csvToJsonArr } from "wrangle-csv";
+import { csvToJsonArr, csvToJsonObj } from "wrangle-csv";
 
 const csvFile = fs.readFile("c:/path/to/your/file.csv");
-const jsonData = csvToJsonArr(csvFile);
+const jsonArray = csvToJsonArr(csvFile);
+const jsonObject = csvToJsonObj(csvFile);
 ```
 
 ## Methods
@@ -52,5 +54,5 @@ Assumes the following structure:
 
 ## TODO
 
-- [ ] Error handling
-- [ ] Remove duplication and refactor
+- Error handling
+- Remove duplication and refactor
